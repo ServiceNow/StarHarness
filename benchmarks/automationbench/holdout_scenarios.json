@@ -1,0 +1,82 @@
+{
+  "description": "Held-out AutomationBench finance generalization set: the 50 tasks outside the evolution pool. Never shown to the proposer; used only for final generalization checks.",
+  "source": "runs/ab_finance_base_gpt55 (gpt-5.5 medium, public finance 100-task split)",
+  "selection_method": "All finance tasks not selected into the 50-task evolution pool.",
+  "target_reference": {
+    "full_benchmark": "runs/ab_finance_base_gpt55",
+    "overall": {
+      "n_tasks": 100,
+      "aa_mean": 0.596,
+      "failure_modes": {
+        "low": 9,
+        "guardrail_zero": 21,
+        "mid": 36,
+        "strict_pass": 31,
+        "clean_zero": 3
+      }
+    }
+  },
+  "subset": {
+    "n_tasks": 50,
+    "baseline_score": 0.5954,
+    "failure_modes": {
+      "guardrail_zero": 11,
+      "strict_pass": 15,
+      "mid": 18,
+      "clean_zero": 2,
+      "low": 4
+    }
+  },
+  "scenarios": [
+    "4002",
+    "4006",
+    "4008",
+    "4010",
+    "4012",
+    "4013",
+    "4014",
+    "4015",
+    "4017",
+    "4021",
+    "4023",
+    "4024",
+    "4025",
+    "4026",
+    "4027",
+    "4030",
+    "4033",
+    "4040",
+    "4041",
+    "4042",
+    "4043",
+    "4044",
+    "4045",
+    "4046",
+    "4047",
+    "4048",
+    "4049",
+    "4053",
+    "4060",
+    "4061",
+    "4064",
+    "4065",
+    "4068",
+    "4069",
+    "4070",
+    "4071",
+    "4076",
+    "4077",
+    "4079",
+    "4082",
+    "4083",
+    "4085",
+    "4086",
+    "4087",
+    "4090",
+    "4091",
+    "4094",
+    "4097",
+    "4098",
+    "4099"
+  ]
+}

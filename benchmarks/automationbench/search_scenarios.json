@@ -1,0 +1,62 @@
+{
+  "description": "Proposer-visible AutomationBench finance search split. Stratified sample of the 50-task evolution pool from the gpt-5.5 baseline, matched to the overall aa mean and failure-mode distribution. The proposer may read traces from this split.",
+  "source": "runs/ab_finance_base_gpt55 (gpt-5.5 medium, public finance 100-task split)",
+  "selection_method": "50-task evolution pool sampled from the 100-task finance baseline to match overall aa mean + failure modes, then split 30/20 (seed=42, greedy-best-of-60000).",
+  "target_reference": {
+    "full_benchmark": "runs/ab_finance_base_gpt55",
+    "overall": {
+      "n_tasks": 100,
+      "aa_mean": 0.596,
+      "failure_modes": {
+        "low": 9,
+        "guardrail_zero": 21,
+        "mid": 36,
+        "strict_pass": 31,
+        "clean_zero": 3
+      }
+    }
+  },
+  "subset": {
+    "n_tasks": 30,
+    "baseline_score": 0.596,
+    "failure_modes": {
+      "low": 3,
+      "guardrail_zero": 6,
+      "mid": 11,
+      "strict_pass": 9,
+      "clean_zero": 1
+    }
+  },
+  "scenarios": [
+    "4001",
+    "4003",
+    "4004",
+    "4011",
+    "4016",
+    "4018",
+    "4019",
+    "4020",
+    "4022",
+    "4031",
+    "4032",
+    "4035",
+    "4036",
+    "4037",
+    "4038",
+    "4051",
+    "4052",
+    "4055",
+    "4056",
+    "4057",
+    "4059",
+    "4062",
+    "4063",
+    "4066",
+    "4078",
+    "4081",
+    "4088",
+    "4092",
+    "4093",
+    "4100"
+  ]
+}

@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use StarHarness, please cite this software."
+title: "StarHarness"
+type: software
+version: 0.1.0
+date-released: 2026-08-24
+authors:
+  - given-names: Esakkivel
+    family-names: Esakkiraja
+    affiliation: ServiceNow
+  - given-names: Denis
+    family-names: Akhiyarov
+    affiliation: ServiceNow
+  - given-names: Vikas
+    family-names: Yadav
+    affiliation: ServiceNow
+  - given-names: Sai
+    family-names: Rajeswar
+    affiliation: "ServiceNow; Mila, Université de Montréal"
+  - given-names: Patrice
+    family-names: Bechard
+    affiliation: ServiceNow
+  - given-names: Sridhar
+    family-names: Nemala
+    affiliation: ServiceNow
+  - given-names: Sagar
+    family-names: Davasam
+    affiliation: ServiceNow
+license: MIT

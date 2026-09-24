@@ -1,0 +1,51 @@
+{
+  "description": "Proposer-hidden AutomationBench finance selection split. Complement of search_scenarios.json within the 50-task evolution pool, matched on aa mean and failure-mode distribution.",
+  "source": "runs/ab_finance_base_gpt55 (gpt-5.5 medium, public finance 100-task split)",
+  "selection_method": "Complement of the search split within the evolution pool; split chosen to minimize aa-mean and failure-mode divergence between the two.",
+  "target_reference": {
+    "full_benchmark": "runs/ab_finance_base_gpt55",
+    "overall": {
+      "n_tasks": 100,
+      "aa_mean": 0.596,
+      "failure_modes": {
+        "low": 9,
+        "guardrail_zero": 21,
+        "mid": 36,
+        "strict_pass": 31,
+        "clean_zero": 3
+      }
+    }
+  },
+  "subset": {
+    "n_tasks": 20,
+    "baseline_score": 0.596,
+    "failure_modes": {
+      "mid": 7,
+      "guardrail_zero": 4,
+      "low": 2,
+      "strict_pass": 7
+    }
+  },
+  "scenarios": [
+    "4005",
+    "4007",
+    "4009",
+    "4028",
+    "4029",
+    "4034",
+    "4039",
+    "4050",
+    "4054",
+    "4058",
+    "4067",
+    "4072",
+    "4073",
+    "4074",
+    "4075",
+    "4080",
+    "4084",
+    "4089",
+    "4095",
+    "4096"
+  ]
+}

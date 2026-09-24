@@ -1,0 +1,42 @@
+[project]
+name = "starharness"
+version = "0.1.0"
+description = "Evolve an agent harness against benchmark adapters while keeping model weights fixed."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.13"
+dependencies = [
+    "automation-bench",
+    "datasets>=3.0",
+    "huggingface-hub>=1.0",
+    "litellm>=1.89",
+    "pydantic>=2.0",
+    "pyyaml>=6.0",
+    "rich>=13.0",
+    "stirrup",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.9",
+]
+
+[tool.uv]
+package = false
+# moviepy 2.2.1 caps pillow<12, which keeps pillow on releases with known CVEs.
+override-dependencies = ["pillow>=12.3.0"]
+
+[tool.uv.sources]
+automation-bench = { path = "vendor/automationbench", editable = true }
+stirrup = { path = "vendor/stirrup", editable = true }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+extend-exclude = [".venv", "vendor"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
